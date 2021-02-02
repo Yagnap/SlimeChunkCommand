@@ -1,0 +1,10 @@
+name: Main
+version: ${project.version}
+main: eu.hobbydevs.slimechunk.Main
+api-version: 1.16
+authors: [ Yagnap ]
+description: Adds a command called "/sc", so the players can know where to build farms without knowing the seed.
+commands:
+  sc:
+    description: Tells you whether or not you are standing in a slime chunk.
+    aliases: slimechunk
