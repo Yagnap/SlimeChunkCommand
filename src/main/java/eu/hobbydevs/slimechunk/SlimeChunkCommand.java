@@ -1,13 +1,10 @@
 package eu.hobbydevs.slimechunk;
 
 import org.bukkit.World;
-import org.bukkit.WorldType;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import java.util.Random;
 
 public class SlimeChunkCommand implements CommandExecutor {
 
@@ -19,10 +16,10 @@ public class SlimeChunkCommand implements CommandExecutor {
 
             if(player.getWorld().getEnvironment().equals(World.Environment.NORMAL)) {
 
-                player.sendMessage("§aThis chunk is " + (player.getLocation().getChunk().isSlimeChunk() ? "§cnot§a " : "") + "a slimechunk.");
+                player.sendMessage("§aThis chunk is " + (player.getLocation().getChunk().isSlimeChunk() ? "" : "§cnot§a ") + "a slimechunk.");
 
             } else {
-                sender.sendMessage("Slime Chunks only exist in the overworld.");
+                sender.sendMessage("§cSlime Chunks only exist in the overworld.");
             }
 
         } else {

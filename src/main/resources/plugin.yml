@@ -3,8 +3,11 @@ version: ${project.version}
 main: eu.hobbydevs.slimechunk.Main
 api-version: 1.16
 authors: [ Yagnap ]
-description: Adds a command called "/sc", so the players can know where to build farms without knowing the seed.
+description: Adds a command called "/sc", so the players can know where to build farms without knowing the seed, and a radar for slime chunk which can be activated via command.
 commands:
   sc:
     description: Tells you whether or not you are standing in a slime chunk.
     aliases: slimechunk
+  scradar:
+    description: Checks everytime you move into a new chunk for slime chunks in the area.
+    aliases: slimechunkradar
