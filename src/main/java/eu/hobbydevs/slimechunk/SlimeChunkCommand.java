@@ -19,7 +19,7 @@ public class SlimeChunkCommand implements CommandExecutor {
 
             if(player.getWorld().getEnvironment().equals(World.Environment.NORMAL)) {
 
-                player.sendMessage("§aThis chunk is " + (player.getLocation().getChunk().isSlimeChunk() ? "§cnot§a " : "") + "a slimechunk.");
+                player.sendMessage("§aThis chunk is " + (player.getLocation().getChunk().isSlimeChunk() ? "" : "§cnot§a ") + "a slimechunk.");
 
             } else {
                 sender.sendMessage("Slime Chunks only exist in the overworld.");
