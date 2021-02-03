@@ -19,6 +19,12 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
+        for(Player p : this.getServer().getOnlinePlayers()) {
+            positions.put(p, p.getLocation());
+        }
+
+
         getCommand("sc").setExecutor(new SlimeChunkCommand());
         getCommand("scradar").setExecutor(new SlimeChunkRadar());
 
@@ -52,9 +58,9 @@ public final class Main extends JavaPlugin {
 
                                 Random rnd = new Random(seed + (long) (xPosition * xPosition * 0x4c1906) + (long) (xPosition * 0x5ac0db) + (long) (zPosition * zPosition) * 0x4307a7L + (long) (zPosition * 0x5f24f) ^ 0x3ad8025f);
                                 if(rnd.nextInt(10) == 0) {
-                                    color = i == 0 && j == 0 ? "§a" : "§2";
+                                    color = i == -1 && j == -1 ? "§a" : "§2";
                                 } else {
-                                    color = i == 0 && j == 0 ? "§c" : "§4";
+                                    color = i == -1 && j == -1     ? "§c" : "§4";
                                 }
                                 radarOutput +=  color + "\u25A0";
 
